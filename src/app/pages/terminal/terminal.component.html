@@ -1,0 +1,66 @@
+<div class="main_container">
+  <!-- <div class="profile">
+    <img src="../../../assets/image.jpg" alt="" />
+  </div> -->
+
+  <div
+    class="terminal_small"
+    [class.maximized]="isMaximized"
+    [class.minimized]="isMinimized"
+    [class.minimizing]="isMinimizing"
+    [class.shake]="isShaking"
+    (click)="focusInput()"
+  >
+    <div class="header">
+      <div class="name">
+        <p>Solomon Tetteh Sackey</p>
+      </div>
+      <div class="menus">
+        <div class="minimize round" (click)="minimizeTerminal()"></div>
+        <div class="maximize round" (click)="maximizeTerminal()"></div>
+        <div class="close round" (click)="shakeTerminal()"></div>
+      </div>
+    </div>
+    <div class="info">
+      @for (line of output; track $index) {
+      <div class="output">
+        <span [innerHTML]="line"></span>
+      </div>
+      <!-- Display dynamic content based on command -->
+      } @if (currentSection === 'about') {
+      <div>
+        <p>Your bio information goes here...</p>
+      </div>
+      } @if (currentSection === 'projects') {
+      <div>
+        <p>Project 1: Description</p>
+        <p>Project 2: Description</p>
+        <p>Project 3: Description</p>
+      </div>
+      } @if (currentSection === 'skills') {
+      <div>
+        <p>Project 1: Description</p>
+        <p>Project 2: Description</p>
+        <p>Project 3: Description</p>
+      </div>
+      } @if (currentSection === 'contact') {
+      <div>
+        <p>Contact details go here...</p>
+      </div>
+      }
+      <div class="prompt">
+        @if (showPrompt) {
+        <span>$ {{ currentCommand }}</span>
+        }
+        <input
+          #inputField
+          type="text"
+          (keyup)="handleInput($event)"
+          [(ngModel)]="currentCommand"
+          autofocus
+          class="cursor"
+        />
+      </div>
+    </div>
+  </div>
+</div>

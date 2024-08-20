@@ -1,1 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.triangle {
+    font-family: "Courier New", Courier, monospace;
+    text-align: center;
+    white-space: pre;
+    color: white;
+    line-height: 1.5em;
+  }
+   
+.close{
+    color: #ff5733;
+    font-size: 2rem;
+  font-weight: bold;
+}
+.red {
+  color: #ff5733;
+  font-weight: bold;
+}
+
+.green {
+  color: #33ff57;
+}
+
+.blue {
+  color: #3357ff;
+}
+
+.yellow {
+  color: #f0e68c;
+}
+
+
+// Scrollbar styles
+::-webkit-scrollbar {
+    width: 0.1rem;
+    border-radius: 12px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: green;
+    border-radius: 2px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+  }
+  
+  // When the isnt't scrolling, hide the scrollbar
+  ::-webkit-scrollbar-thumb:active {
+    background: #b3b3b3;
+  }
+  
+  :host ::ng-deep .otp-input {
+   /* Your styles here */
+   width: 60px !important;
+   height: 60px !important;
+   font-size: 15px !important;
+   font-weight: bolder;
+  }
