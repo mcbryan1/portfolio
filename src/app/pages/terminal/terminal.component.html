@@ -27,7 +27,8 @@
         <span [innerHTML]="line"></span>
       </div>
       <!-- Display dynamic content based on command -->
-      } @if (currentSection === 'about') {
+      } 
+      <!-- @if (currentSection === 'about') {
       <div>
         <p>Your bio information goes here...</p>
       </div>
@@ -47,7 +48,7 @@
       <div>
         <p>Contact details go here...</p>
       </div>
-      }
+      } -->
       <div class="prompt">
         @if (showPrompt) {
         <span>$ {{ currentCommand }}</span>
